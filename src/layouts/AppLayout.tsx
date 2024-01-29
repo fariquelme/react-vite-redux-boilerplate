@@ -2,10 +2,10 @@ import { Outlet } from "react-router-dom";
 import NavBar from "../components/NavBar";
 import { Suspense } from "react";
 
-function AppLayout() {
+function AppLayout({locale, onLocaleChange}:{locale:string, onLocaleChange:(locale:string) => void}) {
   return (
     <div>
-      <NavBar />
+      <NavBar locale={locale} onLocaleChange={onLocaleChange}/>
       <Suspense fallback={<h1>Loading route from AppLayout fallback</h1>}>
         <Outlet />
       </Suspense>
