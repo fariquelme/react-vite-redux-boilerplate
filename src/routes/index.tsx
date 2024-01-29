@@ -5,15 +5,58 @@ const Home = lazy(() => import("../pages/Home"));
 const Examples = lazy(() => import("../pages/Examples"));
 const ErrorNotFound = lazy(() => import("../pages/ErrorNotFound"));
 import AppLayout from "../layouts/AppLayout";
+import ErrorBoundary from "../utils/ErrorBoundry";
+import FallbackComponent from "../components/FallbackComponent";
 
-
-function Router({ locale, onLocaleChange}:{locale:string, onLocaleChange:(locale:string) => void}) {
+function Router({
+  locale,
+  onLocaleChange,
+}: {
+  locale: string;
+  onLocaleChange: (locale: string) => void;
+}) {
   return (
     <Routes>
-      <Route path="/" element={<AppLayout locale={locale} onLocaleChange={onLocaleChange}/>}>
-        <Route path="/" element={<Home />} />
-        <Route path="/examples" element={<Examples />} />
-        <Route path="*" element={<ErrorNotFound />} />
+      <Route
+        path="/"
+        element={
+          <ErrorBoundary
+            fallback={FallbackComponent({ message: "App Layout Error" })}
+          >
+            <AppLayout locale={locale} onLocaleChange={onLocaleChange} />
+          </ErrorBoundary>
+        }
+      >
+        <Route
+          path="/"
+          element={
+            <ErrorBoundary
+              fallback={FallbackComponent({ message: "Home Error" })}
+            >
+              <Home />
+            </ErrorBoundary>
+          }
+        />
+        <Route
+          path="/examples"
+          element={
+            <ErrorBoundary
+              fallback={FallbackComponent({ message: "Examples Error" })}
+            >
+              <Examples />
+            </ErrorBoundary>
+          }
+        />
+        <Route
+          path="*"
+          element={
+            <ErrorBoundary
+              fallback={FallbackComponent({ message: "ErrorNotFound Error" })}
+            >
+              <ErrorNotFound />
+            </ErrorBoundary>
+          }
+        />
       </Route>
     </Routes>
   );

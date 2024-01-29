@@ -1,4 +1,12 @@
-# React + TypeScript + Vite
+# React + TypeScript + Vite + Redux + React Router
+
+### Setup Features
+- [x] Vite
+- [x] Redux Toolkit
+- [x] React Router 
+- [x] React Intl 
+- [x] Minimal Error Bounds
+- [x] Minimal Code Splitting
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
@@ -28,8 +36,3 @@ export default {
 - Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
 - Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
 - Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
-
-# TO-DO
-- Add error boundries 
-- Add Stylex
-- Add In18
