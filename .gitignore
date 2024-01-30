@@ -6,11 +6,48 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
+base.tailwind.config.ts
 
-node_modules
+*.iml
+*.local
+*.log*
+*.pyc
+*.sublime-project
+*.sublime-workspace
+*.swo
+*.swp
+*~
+.DS_STORE
+.flowconfig
+.grunt
+.idea
+.module-cache
+.vscode
+_SpecRunner.html
+__benchmarks__
+build/
+chrome-user-data
+coverage/
 dist
 dist-ssr
-*.local
+fixtures/dom/public/react-dom.js
+fixtures/dom/public/react.js
+node_modules
+packages/react-devtools-core/dist
+packages/react-devtools-extensions/.tempUserDataDir
+packages/react-devtools-extensions/chrome/*.crx
+packages/react-devtools-extensions/chrome/*.pem
+packages/react-devtools-extensions/chrome/build
+packages/react-devtools-extensions/firefox/*.pem
+packages/react-devtools-extensions/firefox/*.xpi
+packages/react-devtools-extensions/firefox/build
+packages/react-devtools-extensions/shared/build
+packages/react-devtools-inline/dist
+packages/react-devtools-shell/dist
+packages/react-devtools-timeline/dist
+remote-repo/
+scripts/flow/*/.flowconfig
+test/the-files-to-test.generated.js
 
 # Editor directories and files
 .vscode/*
@@ -22,3 +59,4 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+

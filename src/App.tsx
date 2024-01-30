@@ -39,7 +39,7 @@ function App() {
     setMessages(loadMessages(locale));
   }, [locale]);
   return (
-    <ErrorBoundary fallback={<FallbackComponent/>}>
+    <ErrorBoundary fallback={<FallbackComponent message={'Error from App'}/>}>
       <Provider store={store}>
         <BrowserRouter>
           <IntlProvider
