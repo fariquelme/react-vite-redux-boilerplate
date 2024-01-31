@@ -13,11 +13,11 @@ function AppLayout({
 }) {
   return (
     <div>
-      <ErrorBoundary fallback={FallbackComponent({message:"NavBar error"})}>
+      <ErrorBoundary fallback={FallbackComponent({ message: "NavBar error" })}>
         <NavBar locale={locale} onLocaleChange={onLocaleChange} />
       </ErrorBoundary>
 
-      <ErrorBoundary fallback={FallbackComponent({message:"Outlet error"})}>
+      <ErrorBoundary fallback={FallbackComponent({ message: "Outlet error" })}>
         <Suspense fallback={<h1>Loading route from AppLayout fallback</h1>}>
           <Outlet />
         </Suspense>

@@ -4,5 +4,6 @@
 
 html *
 {
-   font-family: Arial !important;
+   font-family: Segoe UI;
+   font-weight: 400;
 }

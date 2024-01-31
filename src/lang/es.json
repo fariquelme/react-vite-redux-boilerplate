@@ -1,8 +1,10 @@
 {
-  "conf.lang":"Español",
+  "conf.lang.es":"Español",
+  "conf.lang.en":"Inglés",
   "home.welcome":"¡Bienvenido!",
   "navbar.lnk-home":"Inicio",
   "navbar.lnk-examples":"Ejemplos",
+  "navbar.language":"Idioma",
   "message.argument": "¡Hola, {name}! 👋",
   "message.plural": "{count, plural, one {# articulo} other {# artículos}}",
   "message.select": "{gender, select, male {Sr.} female {Sra.} other {Usuario}}",
